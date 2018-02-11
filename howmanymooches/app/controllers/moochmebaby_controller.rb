@@ -1,0 +1,2 @@
+class MoochmebabyController < ApplicationController
+end

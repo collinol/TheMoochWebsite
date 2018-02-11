@@ -1,0 +1,19 @@
+<% require 'date' %>
+
+<% mooch = 10 %>
+<% da_date = params["ur_date"] %>
+<% da_year = da_date["year"].to_i %>
+<% da_month = da_date["month"].to_i %>
+<% da_day = da_date["day"].to_i %>
+
+<% Date.today.strftime("%Y%m%d") %>
+<% new_date = Date.new(da_year,da_month,da_day) %>
+<p><% mooch_count = Date.today - new_date %></p>
+<p><% mooch_count %></p>
+<div class="row">
+<%= image_tag("https://www.gannett-cdn.com/-mm-/66fb58705d66d4df4661f176307fc2f2c1538434/c=21-0-1003-738&r=x404&c=534x401/local/-/media/2018/01/18/USATODAY/USATODAY/636518982902306689-OPPOSE-2-.JPG") %>
+</div>
+
+
+
+<p><font size="4"> Your day was </font>  <%=  mooch_count.to_i / mooch %> <font size="4"> Mooches Ago! </font></p>
